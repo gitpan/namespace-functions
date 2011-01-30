@@ -64,7 +64,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.0101';
 
 
 use Symbol::Util ();
@@ -196,7 +196,7 @@ others can be deleted safely.
 
   package My::MooseClass;
 
-  use Scalar::Util 'reftype';
+  use Moose;
 
   use namespace::functions -except => 'meta';
 

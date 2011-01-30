@@ -7,6 +7,8 @@ use Carp ();
 
 $SIG{__WARN__} = sub { local $Carp::CarpLevel = 1; Carp::confess("Warning: ", @_) };
 
+BEGIN { eval q{ use Test::More skip_all => 'Mouse is required' } if not eval { require Mouse } };
+
 use Test::More tests => 4;
 
 use lib 't';
